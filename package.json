@@ -1,0 +1,15 @@
+{
+  "name": "socialnetworkgoogleoauth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "author": "Ivan Evačić",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "mongoose": "^5.0.0-rc1"
+  }
+}
