@@ -8,7 +8,7 @@ router.get('/', (req, res)=>{
 });
 
 // add story form
-router.get('/add', ensureAuthenticated,  (req, res)=>{
+router.get('/add', ensureAuthenticated, (req, res)=>{
   res.render('stories/add');
 });
 
