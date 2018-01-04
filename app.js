@@ -6,7 +6,7 @@ const passport = require('passport');
 const session = require('express-session');
 
 //load user model
-require('./models/User');
+require('./models/user');
 
 //passport config
 require('./config/passport')(passport);   //immediatelly pass passport
