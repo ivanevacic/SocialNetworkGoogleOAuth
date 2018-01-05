@@ -1,3 +1,5 @@
+const moment = require('moment');
+
 //handlebars helpers
 
 module.exports = {
@@ -15,5 +17,8 @@ module.exports = {
   //strips html tags
   stripTags: (input) => {
     return input.replace(/<(?:.|\n)*?>/gm, '');   
+  },
+  formatDate: (date, format)=>{
+    return moment(date).format(format);
   }
 }
