@@ -29,7 +29,8 @@ const {
   truncate,
   stripTags,
   formatDate,
-  select
+  select,
+  editIcon
 } = require('./helpers/hbs');
 
 //map global promise
@@ -58,7 +59,8 @@ app.engine('handlebars', exphbs({
     truncate: truncate, //added hbs helpers to middleware so they are usable in .handlebars files
     stripTags: stripTags,
     formatDate: formatDate,
-    select: select
+    select: select,
+    editIcon: editIcon
   },
   defaultLayout: 'main'
 }));

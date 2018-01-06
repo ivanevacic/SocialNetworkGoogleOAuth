@@ -1,20 +1,21 @@
-<h1>Index</h1>
+<h1>Stories</h1>
 
 <div class="row">
   {{#each stories}}
   <div class="col s12 m4">
     <div class="card">
       <div>
-        <a href="/stories/edit/{{id}}" class="btn-floating halfway-fab red">
-          <i class="fa fa-pencil"></i>
-        </a>
+        {{#if user}}
+          {{{editIcon user.id ../user.id id}}}          <!-- triple curly braces becouse we are parsing html from helpers/hbs.js -->
+        {{/if}}
       </div>
       <div class="card-content center-align">
         <h5>{{title}}</h5>
         <p class="story-text">{{stripTags (truncate body 150) }}</p> <!--no need for (),only spaces if using one function,otherwise use like here -->
         <br>
         <div class="chip">
-          <img src="{{user.image}}"> {{user.firstName}} {{user.lastName}}
+          <img src="{{user.image}}">
+            <a href="/stories/user/{{user.id}}">{{user.firstName}} {{user.lastName}}</a>
         </div>
       </div>
       <div class="card-action center-align">
