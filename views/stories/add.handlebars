@@ -1,4 +1,4 @@
-<h1>Add</h1>
+<h1>Add Story</h1>
 <div class="row">
   <form action="/stories" method="post" class="col s12">
     <div class="row">
@@ -14,6 +14,7 @@
           <option value="public" selected>Public</option>
           <option value="private">Private</option>
           <option value="unpublished">Unpublished</option>
+        </select>
         <label for="status">Status</label>
       </div>
     </div>
@@ -25,13 +26,13 @@
       </p>
     </div>
 
-
     <div class="row">
       <div class="input-field">
-        <h5>Tell us your story:</h5>
+        <h5>Tell Us Your Story:</h5>
         <textarea name="body"></textarea>
       </div>
     </div>
+
     <input type="submit" value="Save" class="btn">
   </form>
 </div>
